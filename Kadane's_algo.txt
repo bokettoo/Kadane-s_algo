@@ -1,0 +1,21 @@
+Algorithme Kadane
+fonction algo_kadane(Tableau T:entier) :entier
+
+	variable: i : entier
+    		 somme_act : entier
+   		 somme_max : entier	
+
+Début
+    somme_act <-- 0
+    somme_max <-- 0 
+    Pour i <-- 0 à n - 1 pas 1 faire 
+        somme_act <-- somme_act + Tab(i)
+        Si somme_act < 0 alors
+            somme_act <-- 0
+        Fin Si
+        Si somme_act > somme_max alors
+            somme_max <-- somme_act
+        Fin Si
+    Fin Pour
+    Retourner somme_max
+Finfonction
